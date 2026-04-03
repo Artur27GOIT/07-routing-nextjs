@@ -3,17 +3,14 @@ import type { ReactNode } from "react";
 export default function FilterLayout({
   children,
   sidebar,
-  modal,
 }: {
   children: ReactNode;
   sidebar: ReactNode;
-  modal: ReactNode;
 }) {
   return (
-    <>
+    <div style={{ display: "flex", gap: "24px" }}>
       {sidebar}
       {children}
-      {modal}
-    </>
+    </div>
   );
 }
