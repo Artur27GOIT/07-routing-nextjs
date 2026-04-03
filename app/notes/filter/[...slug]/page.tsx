@@ -1,22 +1,13 @@
 import { fetchNotes } from "@/lib/api";
-import NotesList from "@/components/NoteList/NoteList";
+import NotesClient from "./Notes.client";
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ tag: string[] }>;
-}) {
-  const { tag } = await params;
-
-  const currentTag = tag?.[0];
+export default async function Page({ params }: { params: { slug: string[] } }) {
+  const slug = params.slug?.[0];
 
   const queryParams =
-    currentTag === "all"
-      ? undefined
-      : { tag: currentTag, page: 1, perPage: 12 };
+    slug === "all" ? undefined : { tag: slug, page: 1, perPage: 12 };
 
   const response = await fetchNotes(queryParams);
-  const notes = response.notes;
 
-  return <NotesList notes={notes} />;
+  return <NotesClient notes={response.notes} />;
 }
