@@ -1,5 +1,5 @@
-import NotePreview from "@/app/@modal/(.)notes/[id]/NotePreview";
+import NotePreviewClient from "./NotePreview.client";
 
 export default function Page({ params }: { params: { id: string } }) {
-  return <NotePreview id={params.id} />;
+  return <NotePreviewClient id={params.id} />;
 }
