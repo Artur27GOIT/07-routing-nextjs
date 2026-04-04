@@ -8,9 +8,9 @@ export default function FilterLayout({
   sidebar: ReactNode;
 }) {
   return (
-    <div style={{ display: "flex", gap: "24px" }}>
-      {sidebar}
-      {children}
-    </div>
+    <section style={{ display: "flex", gap: "20px" }}>
+      <aside>{sidebar}</aside>
+      <div style={{ flex: 1 }}>{children}</div>
+    </section>
   );
 }
