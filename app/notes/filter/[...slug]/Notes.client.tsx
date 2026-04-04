@@ -10,7 +10,7 @@ import NoteList from "@/components/NoteList/NoteList";
 import Modal from "@/components/Modal/Modal";
 import NoteDetailsClient from "@/app/notes/[id]/NoteDetails.client";
 import NoteForm from "@/components/NoteForm/NoteForm";
-import SidebarNotes from "@/components/SidebarNotes/SidebarNotes";
+import SidebarNotes from "../@sidebar/default";
 
 function useDebounce<T>(value: T, delay = 300) {
   const [debounced, setDebounced] = useState(value);
