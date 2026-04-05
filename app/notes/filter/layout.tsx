@@ -1,14 +1,12 @@
-import type { ReactNode } from "react";
-
-export default function FilterLayout({
+export default function NotesFilterLayout({
   children,
   sidebar,
 }: {
-  children: ReactNode;
-  sidebar: ReactNode;
+  children: React.ReactNode;
+  sidebar: React.ReactNode;
 }) {
   return (
-    <section style={{ display: "flex", gap: "20px" }}>
+    <section style={{ display: "flex" }}>
       <aside>{sidebar}</aside>
       <div style={{ flex: 1 }}>{children}</div>
     </section>
